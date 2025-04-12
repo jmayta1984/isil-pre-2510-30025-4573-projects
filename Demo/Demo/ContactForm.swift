@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct ContactForm: View {
+    
+    @State private var name = ""
+    @State private var email = ""
+    @State private var subscribe = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            Section(header: Text("Información personal")) {
+                TextField("Nombre", text: $name)
+                TextField("Correo", text: $email)
+                    .keyboardType(.emailAddress)
+            }
+            Section {
+                Toggle("Suscribirse al boletín", isOn: $subscribe)
+            }
+        }
     }
 }
 
