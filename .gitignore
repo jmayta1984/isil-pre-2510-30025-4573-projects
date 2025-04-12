@@ -1,0 +1,13 @@
+# Ignorar archivos del sistema
+.DS_Store
+
+# Ignorar datos de usuario de Xcode
+xcuserdata/
+*.xcuserstate
+
+# Ignorar directorios de compilación
+build/
+DerivedData/
+
+# Ignorar archivos temporales de Xcode
+*.xcworkspace
