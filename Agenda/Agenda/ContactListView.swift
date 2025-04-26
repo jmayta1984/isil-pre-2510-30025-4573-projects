@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct ContactListView: View {
-    @State var contacts = [String]()
+    @State var contacts = [Contact]()
     @State var showDetail = false
-    @State var selectedContact: String?
+    @State var selectedContact: Contact?
     
     var body: some View {
         
         NavigationStack {
             List {
-                ForEach(contacts, id:\.self) { contact in
-                    Text(contact)
+                ForEach(contacts) { contact in
+                    Text(contact.name)
                         .onTapGesture {
                             selectedContact = contact
                             showDetail = true

@@ -11,9 +11,9 @@ struct ContactDetailView: View {
     
     @State var name = ""
     @Environment(\.dismiss) var dismiss
-    var contact: String?
+    var contact: Contact?
     
-    var onSave: (String) -> Void
+    var onSave: (Contact) -> Void
     
     var title: String {
         contact == nil ? "New contact":"Edit contact"
@@ -28,7 +28,14 @@ struct ContactDetailView: View {
             .toolbar {
                 ToolbarItem {
                     Button(action: {
-                        onSave(name)
+                        let id: UUID
+                        if let contact = contact {
+                            id = contact.id
+                        } else {
+                            id = UUID()
+                        }
+                        
+                        onSave(Contact(id: id, name: name))
                         dismiss()
                     }) {
                         Text("Save")
@@ -37,7 +44,7 @@ struct ContactDetailView: View {
             }
             .onAppear {
                 if let contact = contact {
-                    name = contact
+                    name = contact.name
                 }
             }
         }
