@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProductListView: View {
     @StateObject var viewModel = ProductListViewModel()
+    @State var showDetail = false
     
     var body: some View {
         NavigationStack {
@@ -23,11 +24,16 @@ struct ProductListView: View {
             .navigationTitle("Inventory")
             .toolbar {
                 Button(action: {
-                    viewModel.addProduct(product: Product(id: UUID(), name: "Laptop", quantity: 70))
+                    showDetail = true
                 }) {
                     Image(systemName: "plus.circle.fill")
                         .resizable()
                         .frame(width: 30, height: 30)
+                }
+            }
+            .sheet(isPresented: $showDetail) {
+                ProductDetailView { product in
+                    viewModel.addProduct(product: product)
                 }
             }
         }

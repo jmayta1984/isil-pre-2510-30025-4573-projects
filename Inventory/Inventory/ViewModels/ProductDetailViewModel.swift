@@ -13,6 +13,7 @@ class ProductDetailViewModel: ObservableObject {
     
     @Published var errorMessage: String?
     
+    
     func validate() -> Product? {
         
         guard !name.isEmpty else {
