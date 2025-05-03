@@ -10,12 +10,17 @@ import SwiftUI
 struct ProductListView: View {
     @StateObject var viewModel = ProductListViewModel()
     @State var showDetail = false
+    @State var selectedProduct: Product?
     
     var body: some View {
         NavigationStack {
             List {
                 ForEach(viewModel.products) { product in
                     Text(product.name)
+                        .onTapGesture {
+                            selectedProduct = product
+                            showDetail = true
+                        }
                 }
                 .onDelete { indexSet in
                     viewModel.deleteProduct(indexSet: indexSet)
@@ -25,6 +30,7 @@ struct ProductListView: View {
             .toolbar {
                 Button(action: {
                     showDetail = true
+                    selectedProduct = nil
                 }) {
                     Image(systemName: "plus.circle.fill")
                         .resizable()
@@ -32,8 +38,9 @@ struct ProductListView: View {
                 }
             }
             .sheet(isPresented: $showDetail) {
-                ProductDetailView { product in
-                    viewModel.addProduct(product: product)
+                ProductDetailView(selectedProduct: selectedProduct) { product in
+                    
+                    viewModel.saveProduct(product: product, id: selectedProduct?.id)
                 }
             }
         }

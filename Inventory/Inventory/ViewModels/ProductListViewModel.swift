@@ -10,6 +10,16 @@ import Foundation
 class ProductListViewModel: ObservableObject {
     @Published private(set) var products = [Product]()
     
+    func saveProduct(product: Product, id: UUID?) {
+        if id != nil {
+            updateProduct(product: product)
+        } else {
+            addProduct(product: product)
+
+        }
+    }
+    
+    
     func addProduct(product: Product) {
         products.append(product)
     }
@@ -18,7 +28,9 @@ class ProductListViewModel: ObservableObject {
         products.remove(atOffsets: indexSet)
     }
     
-    func updateProduct(){
-        
+    func updateProduct(product: Product){
+        products = products.map { it in
+            it.id == product.id ? product : it
+        }
     }
 }

@@ -13,8 +13,7 @@ class ProductDetailViewModel: ObservableObject {
     
     @Published var errorMessage: String?
     
-    
-    func validate() -> Product? {
+    func validate(id: UUID?) -> Product? {
         
         guard !name.isEmpty else {
             errorMessage = "Empty name"
@@ -31,8 +30,12 @@ class ProductDetailViewModel: ObservableObject {
             return nil
         }
         errorMessage = nil
-        return Product(id: UUID(), name: name, quantity: quantity)
+        return Product(id: id ?? UUID(), name: name, quantity: quantity)
         
     }
     
+    func loadData(product: Product) {
+        name = product.name
+        quantity = "\(product.quantity)"
+    }
 }
