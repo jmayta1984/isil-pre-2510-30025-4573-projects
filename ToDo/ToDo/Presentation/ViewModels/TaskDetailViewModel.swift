@@ -7,11 +7,15 @@
 
 import Foundation
 
-class ProductDetailViewModel: ObservableObject {
+class TaskDetailViewModel: ObservableObject {
     @Published var name = ""
     @Published var dueDate = Date()
     @Published var errorMessage:String?
     
+    func loadTask(task: Task) {
+        name = task.name
+        dueDate = task.dueDate
+    }
     
     func validate() -> Task? {
         guard !name.isEmpty else {

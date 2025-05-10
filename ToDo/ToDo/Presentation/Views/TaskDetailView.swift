@@ -7,9 +7,12 @@
 
 import SwiftUI
 
-struct ProductDetailView: View {
-    @StateObject var viewModel = ProductDetailViewModel()
+struct TaskDetailView: View {
+    @StateObject var viewModel = TaskDetailViewModel()
 
+    var selectedTask: Task? = nil
+    var onSave: (Task) -> Void = {_ in}
+    
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -23,6 +26,7 @@ struct ProductDetailView: View {
                 Section {
                     Button(action: {
                         if let task = viewModel.validate() {
+                            onSave(task)
                             dismiss()
 
                         }
@@ -38,11 +42,16 @@ struct ProductDetailView: View {
                 
             }
             .navigationTitle("New task")
+            .onAppear {
+                if let task = selectedTask {
+                    viewModel.loadTask(task: task)
+                }
+            }
         }
         
     }
 }
 
 #Preview {
-    ProductDetailView()
+    TaskDetailView()
 }
