@@ -45,7 +45,9 @@ struct TaskListView: View {
                 }
             }
             .sheet(item: $selectedTask) { task in
-                TaskDetailView(selectedTask: task)
+                TaskDetailView(selectedTask: task) { task in
+                    viewModel.updateTask(task: task)
+                }
             }
         }
     }

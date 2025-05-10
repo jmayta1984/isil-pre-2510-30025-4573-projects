@@ -25,7 +25,7 @@ struct TaskDetailView: View {
                 }
                 Section {
                     Button(action: {
-                        if let task = viewModel.validate() {
+                        if let task = viewModel.validate(id: selectedTask?.id) {
                             onSave(task)
                             dismiss()
 

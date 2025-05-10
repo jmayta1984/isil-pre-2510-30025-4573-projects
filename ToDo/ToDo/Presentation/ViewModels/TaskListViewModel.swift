@@ -20,5 +20,10 @@ class TaskListViewModel: ObservableObject {
         tasks.remove(atOffsets: indexSet)
     }
     
+    func updateTask(task: Task) {
+        tasks = tasks.map { it in
+            it.id == task.id ? task : it
+        }
+    }
     
 }

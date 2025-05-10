@@ -17,13 +17,15 @@ class TaskDetailViewModel: ObservableObject {
         dueDate = task.dueDate
     }
     
-    func validate() -> Task? {
+    func validate(id: UUID?) -> Task? {
         guard !name.isEmpty else {
             errorMessage = "Name is empty"
             return nil
         }
         errorMessage = nil
-        return Task(id: UUID(), name: name, dueDate: dueDate)
+        
+        
+        return Task(id: id ?? UUID() , name: name, dueDate: dueDate)
         
     }
 }
