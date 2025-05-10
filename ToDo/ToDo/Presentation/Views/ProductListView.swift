@@ -29,7 +29,7 @@ struct ProductListView: View {
                 }
             }
             .sheet(isPresented: $showDetail) {
-                Text("Detail")
+                ProductDetailView()
             }
         }
     }
