@@ -11,19 +11,31 @@ class TaskListViewModel: ObservableObject {
     @Published var showDetail = false
     @Published private(set) var tasks = [Task]()
     
+    let taskDao = TaskDAO()
+    
    
     func addTask(task: Task) {
-        tasks.append(task)
+        taskDao.addTask(task: task)
+        fetchTasks()
     }
     
     func deleteTask(indexSet: IndexSet) {
-        tasks.remove(atOffsets: indexSet)
-    }
+        if let index = indexSet.first {
+            taskDao.deteleTask(task: tasks[index])
+            fetchTasks()
+        }
+     }
     
     func updateTask(task: Task) {
-        tasks = tasks.map { it in
-            it.id == task.id ? task : it
-        }
+        taskDao.updateTask(task: task)
+        fetchTasks()
     }
     
+    func fetchTasks(){
+        tasks = taskDao.fetchTasks()
+    }
+    
+    init() {
+        fetchTasks()
+    }
 }

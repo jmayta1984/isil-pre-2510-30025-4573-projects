@@ -12,6 +12,10 @@ struct TaskDetailView: View {
 
     var selectedTask: Task? = nil
     var onSave: (Task) -> Void = {_ in}
+    var title: String  {
+        
+        selectedTask == nil ? "New task" : "Update task"
+    }
     
     @Environment(\.dismiss) var dismiss
     
@@ -41,7 +45,7 @@ struct TaskDetailView: View {
                 }
                 
             }
-            .navigationTitle("New task")
+            .navigationTitle(title)
             .onAppear {
                 if let task = selectedTask {
                     viewModel.loadTask(task: task)
