@@ -19,7 +19,6 @@ struct ProductListView: View {
                     Text(product.name)
                         .onTapGesture {
                             selectedProduct = product
-                            showDetail = true
                         }
                 }
                 .onDelete { indexSet in
@@ -30,7 +29,6 @@ struct ProductListView: View {
             .toolbar {
                 Button(action: {
                     showDetail = true
-                    selectedProduct = nil
                 }) {
                     Image(systemName: "plus.circle.fill")
                         .resizable()
@@ -39,8 +37,12 @@ struct ProductListView: View {
             }
             .sheet(isPresented: $showDetail) {
                 ProductDetailView(selectedProduct: selectedProduct) { product in
-                    
                     viewModel.saveProduct(product: product, id: selectedProduct?.id)
+                }
+            }
+            .sheet(item: $selectedProduct) { selectedProduct in
+                ProductDetailView(selectedProduct: selectedProduct) { product in
+                    viewModel.saveProduct(product: product, id: selectedProduct.id)
                 }
             }
         }
