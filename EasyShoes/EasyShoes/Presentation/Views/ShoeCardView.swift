@@ -21,12 +21,14 @@ struct ShoeCardView: View {
                         .frame(height: 110)
                 } placeholder: {
                     ProgressView()
+                        .frame(height: 110)
                 }
                 Button(action: {}) {
                     Image(systemName: "heart")
                         .resizable()
                         .frame(width: 20, height: 20)
                         .foregroundStyle(Color.primaryColor)
+                    
                 }
             }
                 

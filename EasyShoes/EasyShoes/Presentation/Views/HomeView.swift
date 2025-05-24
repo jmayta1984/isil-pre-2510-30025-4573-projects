@@ -14,15 +14,7 @@ struct HomeView: View {
     
     let genders = ["All", "Men", "Women", "Kids"]
     
-    let shoes = [
-        Shoe(id: 1, name: "Nike React Infinity Run Flyknit", brand: "Nike", gender: "Men", category: "Running", price: 160, image: "https://www.fit2run.com/cdn/shop/files/DH5392-007-PHSRH001-1500.png"),
-        Shoe(id: 2, name: "Nike React Infinity Run Flyknit", brand: "Nike", gender: "Men", category: "Running", price: 160, image: "https://www.fit2run.com/cdn/shop/files/DH5392-007-PHSRH001-1500.png"),
-        Shoe(id: 3, name: "Nike React Infinity Run Flyknit", brand: "Nike", gender: "Men", category: "Running", price: 160, image: "https://www.fit2run.com/cdn/shop/files/DH5392-007-PHSRH001-1500.png"),
-        Shoe(id: 4, name: "Nike React Infinity Run Flyknit", brand: "Nike", gender: "Men", category: "Running", price: 160, image: "https://www.fit2run.com/cdn/shop/files/DH5392-007-PHSRH001-1500.png"),
-        Shoe(id: 5, name: "Nike React Infinity Run Flyknit", brand: "Nike", gender: "Men", category: "Running", price: 160, image: "https://www.fit2run.com/cdn/shop/files/DH5392-007-PHSRH001-1500.png"),
-        Shoe(id: 6, name: "Nike React Infinity Run Flyknit", brand: "Nike", gender: "Men", category: "Running", price: 160, image: "https://www.fit2run.com/cdn/shop/files/DH5392-007-PHSRH001-1500.png")
-        
-    ]
+    @State var shoes = [Shoe]()
     
     var body: some View {
         ScrollView {
@@ -57,14 +49,12 @@ struct HomeView: View {
                         ShoeCardView(shoe: shoe)
                     }
                 }
-                
-                
-                
                 Spacer()
-                
-                
             }
             .padding()
+            .onAppear {
+                shoes = loadShoesFromJson()
+            }
         }
         
     }
