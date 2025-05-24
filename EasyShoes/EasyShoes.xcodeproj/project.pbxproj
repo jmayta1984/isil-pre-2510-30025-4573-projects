@@ -10,9 +10,33 @@
 		FB564D3D2DE14D5F002285A4 /* EasyShoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyShoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		FB564D6C2DE166F8002285A4 /* Exceptions for "EasyShoes" folder in "EasyShoes" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				shoes.json,
+			);
+			target = FB564D3C2DE14D5F002285A4 /* EasyShoes */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		FB564D6D2DE166F8002285A4 /* Exceptions for "EasyShoes" folder in "Compile Sources" phase from "EasyShoes" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = FB564D392DE14D5F002285A4 /* Sources */;
+			membershipExceptions = (
+				shoes.json,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		FB564D3F2DE14D5F002285A4 /* EasyShoes */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				FB564D6C2DE166F8002285A4 /* Exceptions for "EasyShoes" folder in "EasyShoes" target */,
+				FB564D6D2DE166F8002285A4 /* Exceptions for "EasyShoes" folder in "Compile Sources" phase from "EasyShoes" target */,
+			);
 			path = EasyShoes;
 			sourceTree = "<group>";
 		};

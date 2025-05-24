@@ -8,5 +8,5 @@
 import SwiftUI
 
 extension Color {
-    static let primaryColor = Color(red: 225 / 255, green: 107 / 255, blue: 59 / 255)
+    static let primaryColor = Color(red: 255 / 255, green: 107 / 255, blue: 53 / 255)
 }

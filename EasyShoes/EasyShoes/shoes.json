@@ -1,0 +1,807 @@
+[
+  {
+    "id": 1,
+    "name": "Nike React Infinity Run Flyknit",
+    "brand": "NIKE",
+    "gender": "MEN",
+    "category": "RUNNING",
+    "price": 160,
+    "sizes_available": [
+      {
+        "size": 8,
+        "quantity": 4
+      },
+      {
+        "size": 8.5,
+        "quantity": 1
+      },
+      {
+        "size": 9,
+        "quantity": 2
+      },
+      {
+        "size": 9.5,
+        "quantity": 3
+      },
+      {
+        "size": 10,
+        "quantity": 3
+      },
+      {
+        "size": 10.5,
+        "quantity": 5
+      }
+    ],
+    "image": "https://www.fit2run.com/cdn/shop/files/DH5392-007-PHSRH001-1500.png"
+  },
+  {
+    "id": 2,
+    "name": "Nike React Miler",
+    "brand": "NIKE",
+    "gender": "MEN",
+    "category": "RUNNING",
+    "price": 130,
+    "sizes_available": [
+      {
+        "size": 8,
+        "quantity": 2
+      },
+      {
+        "size": 8.5,
+        "quantity": 4
+      },
+      {
+        "size": 9,
+        "quantity": 2
+      },
+      {
+        "size": 9.5,
+        "quantity": 1
+      },
+      {
+        "size": 10,
+        "quantity": 4
+      },
+      {
+        "size": 10.5,
+        "quantity": 2
+      }
+    ],
+    "image": "https://i.ebayimg.com/images/g/SoIAAOSwEXpmIQ~7/s-l400.png"
+  },
+  {
+    "id": 3,
+    "name": "Nike Air Zoom Pegasus 37",
+    "brand": "NIKE",
+    "gender": "WOMEN",
+    "category": "RUNNING",
+    "price": 120,
+    "sizes_available": [
+      {
+        "size": 8,
+        "quantity": 2
+      },
+      {
+        "size": 8.5,
+        "quantity": 2
+      },
+      {
+        "size": 9,
+        "quantity": 4
+      },
+      {
+        "size": 9.5,
+        "quantity": 2
+      },
+      {
+        "size": 10,
+        "quantity": 1
+      },
+      {
+        "size": 10.5,
+        "quantity": 5
+      }
+    ],
+    "image": "https://d2cva83hdk3bwc.cloudfront.net/nike-air-zoom-pegasus-37-white-cyber-1.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Nike Joyride Run Flyknit",
+    "brand": "NIKE",
+    "gender": "WOMEN",
+    "category": "RUNNING",
+    "price": 180,
+    "sizes_available": [
+      {
+        "size": 8,
+        "quantity": 5
+      },
+      {
+        "size": 8.5,
+        "quantity": 5
+      },
+      {
+        "size": 9,
+        "quantity": 4
+      },
+      {
+        "size": 9.5,
+        "quantity": 3
+      },
+      {
+        "size": 10,
+        "quantity": 4
+      },
+      {
+        "size": 10.5,
+        "quantity": 1
+      }
+    ],
+    "image": "https://images.novelship.com/product/_women__nike_joyride_run_flyknit__cinnabar__aq2731_0_58551.png"
+  },
+  {
+    "id": 5,
+    "name": "Nike Mercurial Vapor 13 Elite FG",
+    "brand": "NIKE",
+    "gender": "WOMEN",
+    "category": "FOOTBALL",
+    "price": 250,
+    "sizes_available": [
+      {
+        "size": 8,
+        "quantity": 4
+      },
+      {
+        "size": 8.5,
+        "quantity": 4
+      },
+      {
+        "size": 9,
+        "quantity": 5
+      },
+      {
+        "size": 9.5,
+        "quantity": 5
+      },
+      {
+        "size": 10,
+        "quantity": 5
+      },
+      {
+        "size": 10.5,
+        "quantity": 2
+      }
+    ],
+    "image": "https://ftblboots.com/cdn/shop/files/IMG_7647.png"
+  },
+  {
+    "id": 6,
+    "name": "Nike Phantom Vision Elite Dynamic Fit FG",
+    "brand": "NIKE",
+    "gender": "WOMEN",
+    "category": "FOOTBALL",
+    "price": 150,
+    "sizes_available": [
+      {
+        "size": 8,
+        "quantity": 1
+      },
+      {
+        "size": 8.5,
+        "quantity": 4
+      },
+      {
+        "size": 9,
+        "quantity": 3
+      },
+      {
+        "size": 9.5,
+        "quantity": 4
+      },
+      {
+        "size": 10,
+        "quantity": 1
+      },
+      {
+        "size": 10.5,
+        "quantity": 2
+      }
+    ],
+    "image": "https://soccerpost.com/cdn/shop/files/AURORA_DD9546-600_PHSRH000-2000_clipped_rev_1.png"
+  },
+  {
+    "id": 7,
+    "name": "Nike Phantom Venom Academy FG",
+    "brand": "NIKE",
+    "gender": "WOMEN",
+    "category": "FOOTBALL",
+    "price": 80,
+    "sizes_available": [
+      {
+        "size": 8,
+        "quantity": 5
+      },
+      {
+        "size": 8.5,
+        "quantity": 1
+      },
+      {
+        "size": 9,
+        "quantity": 2
+      },
+      {
+        "size": 9.5,
+        "quantity": 2
+      },
+      {
+        "size": 10,
+        "quantity": 5
+      },
+      {
+        "size": 10.5,
+        "quantity": 4
+      }
+    ],
+    "image": "https://midwaysports.com/cdn/shop/files/NikeMen_sPhantomVenomAcademyFG_6.png"
+  },
+  {
+    "id": 8,
+    "name": "Nike Mercurial Vapor 13 Elite Tech Craft FG",
+    "brand": "NIKE",
+    "gender": "MEN",
+    "category": "FOOTBALL",
+    "price": 145,
+    "sizes_available": [
+      {
+        "size": 8,
+        "quantity": 5
+      },
+      {
+        "size": 8.5,
+        "quantity": 3
+      },
+      {
+        "size": 9,
+        "quantity": 3
+      },
+      {
+        "size": 9.5,
+        "quantity": 1
+      },
+      {
+        "size": 10,
+        "quantity": 4
+      },
+      {
+        "size": 10.5,
+        "quantity": 4
+      }
+    ],
+    "image": "https://images.novelship.com/product/nike_mercurial_vapor_13_elite_ag_pro__future_lab___0_42862.png"
+  },
+  {
+    "id": 9,
+    "name": "Nike Mercurial Superfly 7 Pro MDS FG",
+    "brand": "NIKE",
+    "gender": "MEN",
+    "category": "FOOTBALL",
+    "price": 137,
+    "sizes_available": [
+      {
+        "size": 8,
+        "quantity": 3
+      },
+      {
+        "size": 8.5,
+        "quantity": 4
+      },
+      {
+        "size": 9,
+        "quantity": 4
+      },
+      {
+        "size": 9.5,
+        "quantity": 4
+      },
+      {
+        "size": 10,
+        "quantity": 5
+      },
+      {
+        "size": 10.5,
+        "quantity": 2
+      }
+    ],
+    "image": "https://aztecasoccer.com/cdn/shop/files/nike-mens-zoom-mercurial-superfly-10-academy-mds-009-fg-mg-barley-green-metal.png"
+  },
+  {
+    "id": 10,
+    "name": "Nike Air Force 1",
+    "brand": "NIKE",
+    "gender": "KIDS",
+    "category": "CASUAL",
+    "price": 90,
+    "sizes_available": [
+      {
+        "size": 8,
+        "quantity": 2
+      },
+      {
+        "size": 8.5,
+        "quantity": 2
+      },
+      {
+        "size": 9,
+        "quantity": 4
+      },
+      {
+        "size": 9.5,
+        "quantity": 1
+      },
+      {
+        "size": 10,
+        "quantity": 4
+      },
+      {
+        "size": 10.5,
+        "quantity": 1
+      }
+    ],
+    "image": "https://midwaysports.com/cdn/shop/files/NikeAirForce1BigKids_Shoes_5.png"
+  },
+  {
+    "id": 11,
+    "name": "Nike Air Max 90",
+    "brand": "NIKE",
+    "gender": "KIDS",
+    "category": "CASUAL",
+    "price": 100,
+    "sizes_available": [
+      {
+        "size": 8,
+        "quantity": 2
+      },
+      {
+        "size": 8.5,
+        "quantity": 5
+      },
+      {
+        "size": 9,
+        "quantity": 2
+      },
+      {
+        "size": 9.5,
+        "quantity": 2
+      },
+      {
+        "size": 10,
+        "quantity": 1
+      },
+      {
+        "size": 10.5,
+        "quantity": 1
+      }
+    ],
+    "image": "https://images.footlocker.com/is/image/FLEU/246782457704_01?wid=500&hei=500&fmt=png-alpha"
+  },
+  {
+    "id": 12,
+    "name": "Nike Air Max 90 LTR",
+    "brand": "NIKE",
+    "gender": "KIDS",
+    "category": "CASUAL",
+    "price": 110,
+    "sizes_available": [
+      {
+        "size": 8,
+        "quantity": 3
+      },
+      {
+        "size": 8.5,
+        "quantity": 4
+      },
+      {
+        "size": 9,
+        "quantity": 5
+      },
+      {
+        "size": 9.5,
+        "quantity": 4
+      },
+      {
+        "size": 10,
+        "quantity": 5
+      },
+      {
+        "size": 10.5,
+        "quantity": 3
+      }
+    ],
+    "image": "https://images.footlocker.com/is/image/EBFL2/Z2888100_a1?wid=500&hei=500&fmt=jpg-alpha"
+  },
+  {
+    "id": 13,
+    "name": "Nike Joyride Dual Run",
+    "brand": "NIKE",
+    "gender": "KIDS",
+    "category": "RUNNING",
+    "price": 110,
+    "sizes_available": [
+      {
+        "size": 8,
+        "quantity": 5
+      },
+      {
+        "size": 8.5,
+        "quantity": 5
+      },
+      {
+        "size": 9,
+        "quantity": 1
+      },
+      {
+        "size": 9.5,
+        "quantity": 2
+      },
+      {
+        "size": 10,
+        "quantity": 2
+      },
+      {
+        "size": 10.5,
+        "quantity": 1
+      }
+    ],
+    "image": "https://i.ebayimg.com/images/g/q~8AAOSwVbBmIRWe/s-l400.png"
+  },
+  {
+    "id": 14,
+    "name": "Nike Renew Run",
+    "brand": "NIKE",
+    "gender": "KIDS",
+    "category": "RUNNING",
+    "price": 80,
+    "sizes_available": [
+      {
+        "size": 8,
+        "quantity": 1
+      },
+      {
+        "size": 8.5,
+        "quantity": 1
+      },
+      {
+        "size": 9,
+        "quantity": 3
+      },
+      {
+        "size": 9.5,
+        "quantity": 1
+      },
+      {
+        "size": 10,
+        "quantity": 4
+      },
+      {
+        "size": 10.5,
+        "quantity": 5
+      }
+    ],
+    "image": "https://soneesports.com/cdn/shop/files/5e3de9dc_c70f_4d93_88b1_1594be8da2c4.png"
+  },
+  {
+    "id": 26,
+    "name": "Nizza X Disney",
+    "brand": "ADIDAS",
+    "gender": "KIDS",
+    "category": "CASUAL",
+    "price": 55,
+    "sizes_available": [
+      {
+        "size": 8,
+        "quantity": 3
+      },
+      {
+        "size": 8.5,
+        "quantity": 3
+      },
+      {
+        "size": 9,
+        "quantity": 4
+      },
+      {
+        "size": 9.5,
+        "quantity": 1
+      },
+      {
+        "size": 10,
+        "quantity": 1
+      },
+      {
+        "size": 10.5,
+        "quantity": 4
+      }
+    ],
+    "image": "https://image.goat.com/750/attachments/product_template_pictures/images/039/631/078/original/FW3823.png.png"
+  },
+  {
+    "id": 27,
+    "name": "X_PLR",
+    "brand": "ADIDAS",
+    "gender": "KIDS",
+    "category": "CASUAL",
+    "price": 65,
+    "sizes_available": [
+      {
+        "size": 8,
+        "quantity": 3
+      },
+      {
+        "size": 8.5,
+        "quantity": 3
+      },
+      {
+        "size": 9,
+        "quantity": 4
+      },
+      {
+        "size": 9.5,
+        "quantity": 1
+      },
+      {
+        "size": 10,
+        "quantity": 4
+      },
+      {
+        "size": 10.5,
+        "quantity": 4
+      }
+    ],
+    "image": "https://images.footlocker.com/is/image/EBFL2/BY9887G_a1?wid=500&hei=500&fmt=jpg-alpha"
+  },
+  {
+    "id": 28,
+    "name": "Stan Smith",
+    "brand": "ADIDAS",
+    "gender": "KIDS",
+    "category": "CASUAL",
+    "price": 55,
+    "sizes_available": [
+      {
+        "size": 8,
+        "quantity": 1
+      },
+      {
+        "size": 8.5,
+        "quantity": 5
+      },
+      {
+        "size": 9,
+        "quantity": 1
+      },
+      {
+        "size": 9.5,
+        "quantity": 2
+      },
+      {
+        "size": 10,
+        "quantity": 3
+      },
+      {
+        "size": 10.5,
+        "quantity": 1
+      }
+    ],
+    "image": "https://i.ebayimg.com/images/g/b8gAAOSw68xifSHy/s-l1200.png"
+  },
+  {
+    "id": 29,
+    "name": "NMD_R1",
+    "brand": "ADIDAS",
+    "gender": "KIDS",
+    "category": "RUNNING",
+    "price": 120,
+    "sizes_available": [
+      {
+        "size": 8,
+        "quantity": 2
+      },
+      {
+        "size": 8.5,
+        "quantity": 4
+      },
+      {
+        "size": 9,
+        "quantity": 5
+      },
+      {
+        "size": 9.5,
+        "quantity": 1
+      },
+      {
+        "size": 10,
+        "quantity": 2
+      },
+      {
+        "size": 10.5,
+        "quantity": 5
+      }
+    ],
+    "image": "https://images.novelship.com/product/1681910497692_adidasNMD_0.png"
+  },
+  {
+    "id": 30,
+    "name": "NMD_R1 Flash Red",
+    "brand": "ADIDAS",
+    "gender": "WOMEN",
+    "category": "CASUAL",
+    "price": 140,
+    "sizes_available": [
+      {
+        "size": 8,
+        "quantity": 3
+      },
+      {
+        "size": 8.5,
+        "quantity": 1
+      },
+      {
+        "size": 9,
+        "quantity": 5
+      },
+      {
+        "size": 9.5,
+        "quantity": 2
+      },
+      {
+        "size": 10,
+        "quantity": 1
+      },
+      {
+        "size": 10.5,
+        "quantity": 3
+      }
+    ],
+    "image": "https://images.footlocker.com/is/image/EBFL2/GY7366_a1?wid=500&hei=500&fmt=png-alpha"
+  },
+  {
+    "id": 31,
+    "name": "Superstar",
+    "brand": "ADIDAS",
+    "gender": "WOMEN",
+    "category": "CASUAL",
+    "price": 90,
+    "sizes_available": [
+      {
+        "size": 8,
+        "quantity": 3
+      },
+      {
+        "size": 8.5,
+        "quantity": 5
+      },
+      {
+        "size": 9,
+        "quantity": 4
+      },
+      {
+        "size": 9.5,
+        "quantity": 4
+      },
+      {
+        "size": 10,
+        "quantity": 2
+      },
+      {
+        "size": 10.5,
+        "quantity": 1
+      }
+    ],
+    "image": "https://images.footlocker.com/is/image/FLEU/245345228802_01?wid=500&hei=500&fmt=png-alpha"
+  },
+  {
+    "id": 32,
+    "name": "Club C Revenge Mens",
+    "brand": "Reebok",
+    "gender": "MEN",
+    "category": "CASUAL",
+    "price": 70,
+    "sizes_available": [
+      {
+        "size": 8,
+        "quantity": 3
+      },
+      {
+        "size": 8.5,
+        "quantity": 5
+      },
+      {
+        "size": 9,
+        "quantity": 5
+      },
+      {
+        "size": 9.5,
+        "quantity": 1
+      },
+      {
+        "size": 10,
+        "quantity": 1
+      },
+      {
+        "size": 10.5,
+        "quantity": 3
+      }
+    ],
+    "image": "https://images.footlocker.com/is/image/EBFL2/10003288_a1?wid=500&hei=500&fmt=png-alpha"
+  },
+  {
+    "id": 33,
+    "name": "SK80-Low",
+    "brand": "Vans",
+    "gender": "MEN",
+    "category": "CASUAL",
+    "price": 60,
+    "sizes_available": [
+      {
+        "size": 8,
+        "quantity": 5
+      },
+      {
+        "size": 8.5,
+        "quantity": 3
+      },
+      {
+        "size": 9,
+        "quantity": 2
+      },
+      {
+        "size": 9.5,
+        "quantity": 4
+      },
+      {
+        "size": 10,
+        "quantity": 2
+      },
+      {
+        "size": 10.5,
+        "quantity": 5
+      }
+    ],
+    "image": "https://images.footlocker.com/is/image/FLEU/244520232604_01?wid=500&hei=500&fmt=png-alpha"
+  },
+  {
+    "id": 34,
+    "name": "Michael Feburary SK8-Hi",
+    "brand": "Vans",
+    "gender": "MEN",
+    "category": "CASUAL",
+    "price": 72,
+    "sizes_available": [
+      {
+        "size": 8,
+        "quantity": 4
+      },
+      {
+        "size": 8.5,
+        "quantity": 3
+      },
+      {
+        "size": 9,
+        "quantity": 5
+      },
+      {
+        "size": 9.5,
+        "quantity": 4
+      },
+      {
+        "size": 10,
+        "quantity": 2
+      },
+      {
+        "size": 10.5,
+        "quantity": 1
+      }
+    ],
+    "image": "https://i.ebayimg.com/images/g/S2MAAOSwCs5jIbtc/s-l500.png"
+  }
+]
