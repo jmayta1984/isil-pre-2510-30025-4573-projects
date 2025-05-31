@@ -34,6 +34,11 @@ struct ContentView: View {
                             .resizable()
                             .frame(width: 30, height: 30)
                             .clipShape(Circle())
+                            .overlay {
+                                Circle()
+                                    .stroke(Color.primaryColor, lineWidth: 2)
+                    
+                            }
 
                             
                     } placeholder: {
