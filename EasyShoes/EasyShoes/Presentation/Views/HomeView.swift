@@ -11,7 +11,6 @@ struct HomeView: View {
     
     @State var search = ""
     @State var selectedGender = "All"
-    
     let genders = ["All", "Men", "Women", "Kids"]
     
     @State var shoes = [Shoe]()

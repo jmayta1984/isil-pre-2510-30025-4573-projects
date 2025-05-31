@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    let user: User
     var body: some View {
         TabView {
             Tab("Home", systemImage: "shoe") {
@@ -23,10 +24,29 @@ struct ContentView: View {
             }
                     
         }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                HStack {
+                    Text("Hi, \(user.firstName) \(user.lastName)")
+                        .bold()
+                    AsyncImage(url: URL(string: user.image)) { image in
+                        image
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                            .clipShape(Circle())
+
+                            
+                    } placeholder: {
+                        ProgressView()
+                    }
+
+                }
+            }
+        }
+        .navigationBarBackButtonHidden()
+        
         .tint(Color.primaryColor)
     }
 }
 
-#Preview {
-    ContentView()
-}
+
