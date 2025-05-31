@@ -24,7 +24,7 @@ class HttpRequestHelper {
         do {
             let data = try JSONEncoder().encode(body)
             urlRequest.httpBody = data
-        } catch let encodingError{
+        } catch let encodingError {
             print("Error: \(encodingError)")
             completion(nil, "Error: \(encodingError)" )
             return
