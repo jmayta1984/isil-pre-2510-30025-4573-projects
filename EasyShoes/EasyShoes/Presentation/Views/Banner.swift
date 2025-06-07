@@ -21,12 +21,13 @@ struct Banner: View {
                     .bold()
                 Button(action: {}){
                     Text("Shop now")
+                        .padding(.horizontal)
+                        .padding(.vertical, 10)
+                        .background(Color.primaryColor)
+                        .foregroundStyle(.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
                 }
-                .padding(.horizontal)
-                .padding(.vertical, 10)
-                .background(Color.primaryColor)
-                .foregroundStyle(.white)
-                .clipShape(RoundedRectangle(cornerRadius: 20))
+               
                 
             }
             Image("banner-adidas")

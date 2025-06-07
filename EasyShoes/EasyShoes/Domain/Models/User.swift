@@ -8,8 +8,6 @@
 struct User: Identifiable, Hashable {
     let id: Int
     let username: String
-    let firstName: String
-    let lastName: String
+    let name: String
     let image: String
-    
 }

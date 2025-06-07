@@ -24,7 +24,7 @@ struct ShoeCardView: View {
                         .frame(height: 110)
                 }
                 Button(action: {}) {
-                    Image(systemName: "heart")
+                    Image(systemName: "heart.fill")
                         .resizable()
                         .frame(width: 20, height: 20)
                         .foregroundStyle(Color.primaryColor)

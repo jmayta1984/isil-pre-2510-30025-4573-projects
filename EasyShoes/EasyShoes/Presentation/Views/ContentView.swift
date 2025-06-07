@@ -27,7 +27,7 @@ struct ContentView: View {
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 HStack {
-                    Text("Hi, \(user.firstName) \(user.lastName)")
+                    Text("Hi, \(user.name)")
                         .bold()
                     AsyncImage(url: URL(string: user.image)) { image in
                         image

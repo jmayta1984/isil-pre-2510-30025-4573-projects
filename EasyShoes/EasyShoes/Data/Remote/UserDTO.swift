@@ -5,7 +5,7 @@
 //  Created by Alumno on 30/05/25.
 //
 
-struct UserResponse: Decodable {
+struct UserDTO: Decodable {
     let id: Int
     let username: String
     let email: String
@@ -15,6 +15,6 @@ struct UserResponse: Decodable {
     let image: String
     
     func toDomain() -> User {
-        User(id: id, username: username, firstName: firstName, lastName: lastName, image: image)
+        User(id: id, username: username, name: "\(firstName) \(lastName)", image: image)
     }
 }

@@ -46,12 +46,13 @@ struct LoginView: View {
                     viewModel.login()
                 }) {
                     Text("Sign in")
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.primaryColor)
+                        .foregroundStyle(.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
                 }
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(Color.primaryColor)
-                .foregroundStyle(.white)
-                .clipShape(RoundedRectangle(cornerRadius: 20))
+                
                 
                 Group {
                     if let message = viewModel.errorMessage {
