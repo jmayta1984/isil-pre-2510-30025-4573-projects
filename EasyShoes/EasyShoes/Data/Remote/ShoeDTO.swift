@@ -37,7 +37,7 @@ struct ShoeDTO: Decodable {
     }
     
     func toDomain() -> Shoe {
-        Shoe(id: id, name: name, brand: brand.capitalizeFirstLetter(), gender: gender.capitalizeFirstLetter(), category: category.capitalizeFirstLetter(), price: price, image: image)
+        Shoe(id: id, name: name, brand: brand.capitalizeFirstLetter(), gender: gender.capitalizeFirstLetter(), category: category.capitalizeFirstLetter(), price: price, image: image, description: description, sizes: sizes.map({ $0.toDomain() }))
     }
 }
 
@@ -48,5 +48,10 @@ struct ShoeSizeDTO: Decodable {
     enum CodingKeys: String, CodingKey {
         case size
         case stock = "quantity"
+    }
+    
+    func toDomain() -> ShoeSize {
+        ShoeSize(id: "\(size)", stock: stock)
+        
     }
 }

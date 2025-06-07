@@ -8,19 +8,23 @@
 import Foundation
 
 class LoginViewModel: ObservableObject {
-    @Published var email = "emilys"
+    @Published var username = "emilys"
     @Published var password = "emilyspass"
-    @Published var errorMessage: String? = nil
-    @Published var user: User? = nil
+    
+    @Published var uiState: UIState<User> = .initialState
     
     let authService = AuthService()
     
     func login()  {
-        authService.login(username: email, password: password) { user, message in
+        uiState = .loadingState
+        authService.login(username: username, password: password) { user, message in
             
             DispatchQueue.main.async {
-                self.errorMessage = message
-                self.user = user
+                if let user = user {
+                    self.uiState = .successState(user)
+                } else {
+                    self.uiState = .failureState(message ?? "Unknow error")
+                }
             }
            
         }

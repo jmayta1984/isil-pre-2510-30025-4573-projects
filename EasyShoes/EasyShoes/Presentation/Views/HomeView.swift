@@ -45,15 +45,21 @@ struct HomeView: View {
                     }
                 }
                 
-                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
-                    ForEach(viewModel.shoes) { shoe in
-                        ShoeCardView(shoe: shoe)
-                            .onTapGesture {
-                                selectedShoe = shoe
-                            }
+                switch viewModel.uiState {
+                case .initialState, .loadingState:
+                    ProgressView()
+                case .successState(let shoes):
+                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
+                        ForEach(shoes) { shoe in
+                            ShoeCardView(shoe: shoe)
+                                .onTapGesture {
+                                    selectedShoe = shoe
+                                }
+                        }
                     }
+                case .failureState(let message):
+                    Text(message)
                 }
-                Spacer()
             }
             .padding()
             .onAppear {

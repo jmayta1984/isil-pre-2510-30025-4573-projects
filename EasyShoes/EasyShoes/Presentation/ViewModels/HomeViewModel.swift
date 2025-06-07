@@ -8,17 +8,17 @@
 import Foundation
 
 class HomeViewModel: ObservableObject {
-    @Published var shoes = [Shoe]()
-    @Published var errorMessage: String? = nil
+    @Published var uiState: UIState<[Shoe]> = .initialState
     
     func getShoes() {
         
+        uiState = .loadingState
         ShoeService().getShoes { shoes, message in
             DispatchQueue.main.async{
                 if let shoes = shoes {
-                    self.shoes = shoes
+                    self.uiState = .successState(shoes)
                 } else {
-                    self.errorMessage = message
+                    self.uiState = .failureState(message ?? "Unknow error")
                 }
             }
         }

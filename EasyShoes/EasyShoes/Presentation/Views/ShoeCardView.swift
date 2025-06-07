@@ -19,16 +19,19 @@ struct ShoeCardView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(height: 110)
+                        .frame(maxWidth: .infinity)
+
                 } placeholder: {
                     ProgressView()
                         .frame(height: 110)
+                        .frame(maxWidth: .infinity)
                 }
-                Button(action: {}) {
-                    Image(systemName: "heart.fill")
+                Button {
+                    
+                } label: {
+                    Image(systemName: "heart")
                         .resizable()
                         .frame(width: 20, height: 20)
-                        .foregroundStyle(Color.primaryColor)
-                    
                 }
             }
                 
@@ -48,8 +51,4 @@ struct ShoeCardView: View {
 
        
     }
-}
-
-#Preview {
-    ShoeCardView(shoe: Shoe(id: 1, name: "Nike React Infinity Run Flyknit", brand: "Nike", gender: "Men", category: "Running", price: 160, image: "https://www.fit2run.com/cdn/shop/files/DH5392-007-PHSRH001-1500.png"))
 }

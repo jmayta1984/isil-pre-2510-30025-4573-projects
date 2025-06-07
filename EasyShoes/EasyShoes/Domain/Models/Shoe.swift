@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Shoe: Identifiable {
+struct Shoe: Identifiable, Equatable {
     let id: Int
     let name: String
     let brand: String
@@ -15,5 +15,12 @@ struct Shoe: Identifiable {
     let category: String
     let price: Int
     let image: String
+    let description: String
+    let sizes: [ShoeSize]
 }
 
+struct ShoeSize: Identifiable, Equatable {
+    let id: String
+    let stock: Int
+    
+}
