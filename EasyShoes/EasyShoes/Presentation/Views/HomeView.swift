@@ -15,6 +15,8 @@ struct HomeView: View {
     
     @StateObject var viewModel = HomeViewModel()
     
+    @State var selectedShoe: Shoe? = nil
+    
     var body: some View {
         ScrollView {
             VStack (spacing: 20){
@@ -46,6 +48,9 @@ struct HomeView: View {
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
                     ForEach(viewModel.shoes) { shoe in
                         ShoeCardView(shoe: shoe)
+                            .onTapGesture {
+                                selectedShoe = shoe
+                            }
                     }
                 }
                 Spacer()
@@ -56,6 +61,10 @@ struct HomeView: View {
             }
         }
         .scrollIndicators(.hidden)
+        .sheet(item: $selectedShoe) { shoe in
+            ShoeDetailView(shoe: shoe)
+        }
+        
     }
 }
 
