@@ -13,7 +13,7 @@ struct HomeView: View {
     @State var selectedGender = "All"
     let genders = ["All", "Men", "Women", "Kids"]
     
-    @State var shoes = [Shoe]()
+    @StateObject var viewModel = HomeViewModel()
     
     var body: some View {
         ScrollView {
@@ -44,7 +44,7 @@ struct HomeView: View {
                 }
                 
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
-                    ForEach(shoes) { shoe in
+                    ForEach(viewModel.shoes) { shoe in
                         ShoeCardView(shoe: shoe)
                     }
                 }
@@ -52,10 +52,10 @@ struct HomeView: View {
             }
             .padding()
             .onAppear {
-                shoes = loadShoesFromJson()
+                viewModel.getShoes()
             }
         }
-        
+        .scrollIndicators(.hidden)
     }
 }
 

@@ -15,7 +15,6 @@ class AuthService {
         
         HttpRequestHelper().POST(url: url, body: UserRequestDTO(username: username, password: password)) { data, error in
             guard error == nil else {
-                print(String(describing: error))
                 completion(nil, error )
                 return
             }
