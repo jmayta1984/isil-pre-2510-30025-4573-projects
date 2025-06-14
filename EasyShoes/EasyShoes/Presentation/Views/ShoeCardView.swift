@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ShoeCardView: View {
     let shoe: Shoe
+    @StateObject var viewModel = ShoeCardViewModel()
     
     var body: some View {
         VStack (alignment: .leading){
@@ -27,9 +28,9 @@ struct ShoeCardView: View {
                         .frame(maxWidth: .infinity)
                 }
                 Button {
-                    
+                    viewModel.toggleFavorite(shoe: shoe)
                 } label: {
-                    Image(systemName: "heart")
+                    Image(systemName: viewModel.isFavorite ? "heart.fill" : "heart")
                         .resizable()
                         .frame(width: 20, height: 20)
                 }
@@ -48,7 +49,9 @@ struct ShoeCardView: View {
         .padding()
         .background(.gray.opacity(0.1))
         .clipShape(RoundedRectangle(cornerRadius: 20))
-
+        .onAppear{
+            viewModel.isFavorite(shoe: shoe)
+        }
        
     }
 }

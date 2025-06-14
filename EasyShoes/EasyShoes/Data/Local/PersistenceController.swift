@@ -14,7 +14,7 @@ class PersistenceController {
     let container: NSPersistentContainer
     
     private init() {
-        self.container = NSPersistentContainer(name: "EasyShoesmodel")
+        self.container = NSPersistentContainer(name: "EasyShoesModel")
         
         container.loadPersistentStores { _, error in
             if let error = error {

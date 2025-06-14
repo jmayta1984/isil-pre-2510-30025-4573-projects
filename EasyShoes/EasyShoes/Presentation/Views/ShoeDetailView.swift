@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ShoeDetailView: View {
     let shoe: Shoe
+    @StateObject var viewModel = ShoeDetailViewModel()
+    let onToggle: () -> Void
+    
     
     @State var selectedSize: ShoeSize? = nil
     
@@ -28,9 +31,10 @@ struct ShoeDetailView: View {
                         .frame(maxWidth: .infinity)
                 }
                 Button {
-                    
+                    viewModel.toggleFavorite(shoe: shoe)
+                    onToggle()
                 } label: {
-                    Image(systemName: "heart")
+                    Image(systemName: viewModel.isFavorite ? "heart.fill" : "heart")
                         .resizable()
                         .frame(width: 24, height: 24)
                         .padding()
@@ -103,6 +107,9 @@ struct ShoeDetailView: View {
             .padding()
             
             
+        }
+        .onAppear{
+            viewModel.isFavorite(shoe: shoe)
         }
     }
 }

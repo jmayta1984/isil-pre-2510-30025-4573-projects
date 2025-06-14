@@ -68,7 +68,9 @@ struct HomeView: View {
         }
         .scrollIndicators(.hidden)
         .sheet(item: $selectedShoe) { shoe in
-            ShoeDetailView(shoe: shoe)
+            ShoeDetailView(shoe: shoe) {
+                viewModel.getShoes()
+            }
         }
         
     }
