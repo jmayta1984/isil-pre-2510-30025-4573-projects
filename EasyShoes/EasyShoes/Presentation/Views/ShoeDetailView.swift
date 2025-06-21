@@ -92,7 +92,12 @@ struct ShoeDetailView: View {
                 }
                 Spacer()
                 Button(action: {
-                    
+                    if let size = selectedSize {
+                        CartItemService().addCartItem(shoeId: shoe.id, name: shoe.name, image: shoe.image, price: shoe.price, size: size.id, quantity: 1, username: "emilys") { _, _ in
+                            
+                        }
+
+                    }
                 }) {
                     Text("Add to cart")
                         .padding()

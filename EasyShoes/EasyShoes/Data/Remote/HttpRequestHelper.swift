@@ -81,7 +81,7 @@ class HttpRequestHelper {
                 return
             }
             
-            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+            guard let response = response as? HTTPURLResponse, 200...201 ~= response.statusCode  else {
                 print("Error: HTTP request failed")
                 completion(nil, "Error: HTTP request failed")
                 return
