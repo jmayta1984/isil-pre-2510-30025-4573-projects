@@ -10,6 +10,7 @@ import SwiftUI
 struct ShoeDetailView: View {
     let shoe: Shoe
     @StateObject var viewModel = ShoeDetailViewModel()
+    @EnvironmentObject var authViewModel: AuthViewModel
     let onToggle: () -> Void
     
     
@@ -76,7 +77,7 @@ struct ShoeDetailView: View {
                                     size == selectedSize ? .white : .gray
                                 )
                                 .background(
-                                    size == selectedSize ?              Color.primaryColor : .white)
+                                    size == selectedSize ? Color.primaryColor : .white)
                             
                                 .onTapGesture {
                                     selectedSize = size
@@ -92,8 +93,8 @@ struct ShoeDetailView: View {
                 }
                 Spacer()
                 Button(action: {
-                    if let size = selectedSize {
-                        CartItemService().addCartItem(shoeId: shoe.id, name: shoe.name, image: shoe.image, price: shoe.price, size: size.id, quantity: 1, username: "emilys") { _, _ in
+                    if let size = selectedSize, let username = authViewModel.user?.username {
+                        CartItemService().addCartItem(shoeId: shoe.id, name: shoe.name, image: shoe.image, price: shoe.price, size: size.id, quantity: 1, username: username) { _, _ in
                             
                         }
 

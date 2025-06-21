@@ -9,9 +9,10 @@ import SwiftUI
 
 struct LoginView: View {
     
+    @EnvironmentObject var authViewModel: AuthViewModel
+    
     @StateObject var viewModel = LoginViewModel()
     @State var isVisible = false
-    @State var user: User? = nil
     @State var alertMessage = ""
     @State var showErrorAlert = false
 
@@ -72,7 +73,7 @@ struct LoginView: View {
                     self.alertMessage = message
                     self.showErrorAlert = true
                 case .successState(let user):
-                    self.user = user
+                    authViewModel.login(user: user)
                 default:
                     break
                 }
@@ -83,9 +84,7 @@ struct LoginView: View {
             }, message: {
                 Text(alertMessage)
             })
-            .navigationDestination(item: $user) { user in
-                ContentView(user: user)
-            }
+
             
         }
     }

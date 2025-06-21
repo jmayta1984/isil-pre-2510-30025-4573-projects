@@ -8,9 +8,10 @@
 import Foundation
 
 class ShoeService {
-    let url = "https://sugary-wool-penguin.glitch.me/shoes"
     
     func getShoes(completion: @escaping([Shoe]?, String?) -> Void) {
+        
+        let url = "https://sugary-wool-penguin.glitch.me/shoes"
         
         HttpRequestHelper().GET(url: url) { data, error in
             guard error == nil else {

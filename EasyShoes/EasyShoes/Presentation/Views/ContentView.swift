@@ -10,48 +10,52 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject var favoriteViewModel = FavoritesViewModel()
-    
-    let user: User
+    @EnvironmentObject var authViewModel: AuthViewModel
+  
     var body: some View {
-        TabView {
-            Tab("Home", systemImage: "shoe") {
-                HomeView()
+        NavigationStack {
+            TabView {
+                Tab("Home", systemImage: "shoe") {
+                    HomeView()
+                }
+                
+                Tab("Favorites", systemImage: "heart") {
+                    FavoritesView()
+                }
+                
+                Tab("Cart", systemImage: "cart") {
+                    CartView()
+                }
+                        
             }
-            
-            Tab("Favorites", systemImage: "heart") {
-                FavoritesView()
-            }
-            
-            Tab("Cart", systemImage: "cart") {
-                Text("Cart")
-            }
-                    
-        }
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
-                HStack {
-                    Text("Hi, \(user.name)")
-                        .bold()
-                    AsyncImage(url: URL(string: user.image)) { image in
-                        image
-                            .resizable()
-                            .frame(width: 30, height: 30)
-                            .clipShape(Circle())
-                            .overlay {
-                                Circle()
-                                    .stroke(Color.primaryColor, lineWidth: 2)
-                    
-                            }
-
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    HStack {
+                        if let user = authViewModel.user {
+                            Text("Hi, \(user.name)")
+                                .bold()
+                            AsyncImage(url: URL(string: user.image)) { image in
+                                image
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                    .clipShape(Circle())
+                                    .overlay {
+                                        Circle()
+                                            .stroke(Color.primaryColor, lineWidth: 2)
                             
-                    } placeholder: {
-                        ProgressView()
-                    }
+                                    }
 
+                                    
+                            } placeholder: {
+                                ProgressView()
+                            }
+                        }
+                    }
                 }
             }
         }
-        .navigationBarBackButtonHidden()
+        
+        
         .tint(Color.primaryColor)
         .environmentObject(favoriteViewModel)
     }
