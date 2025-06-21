@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var favoriteViewModel = FavoritesViewModel()
+    
     let user: User
     var body: some View {
         TabView {
@@ -49,8 +52,8 @@ struct ContentView: View {
             }
         }
         .navigationBarBackButtonHidden()
-        
         .tint(Color.primaryColor)
+        .environmentObject(favoriteViewModel)
     }
 }
 
