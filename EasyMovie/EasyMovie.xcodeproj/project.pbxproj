@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		FBA86BCA2E18AAD0002D9CC2 /* Notifications.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notifications.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBA86BE72E18CE04002D9CC2 /* EasyMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		FBA86BCC2E18AAD0002D9CC2 /* Notifications */ = {
+		FBA86BE92E18CE04002D9CC2 /* EasyMovie */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Notifications;
+			path = EasyMovie;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FBA86BC72E18AAD0002D9CC2 /* Frameworks */ = {
+		FBA86BE42E18CE04002D9CC2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,18 +29,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FBA86BC12E18AAD0002D9CC2 = {
+		FBA86BDE2E18CE04002D9CC2 = {
 			isa = PBXGroup;
 			children = (
-				FBA86BCC2E18AAD0002D9CC2 /* Notifications */,
-				FBA86BCB2E18AAD0002D9CC2 /* Products */,
+				FBA86BE92E18CE04002D9CC2 /* EasyMovie */,
+				FBA86BE82E18CE04002D9CC2 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FBA86BCB2E18AAD0002D9CC2 /* Products */ = {
+		FBA86BE82E18CE04002D9CC2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FBA86BCA2E18AAD0002D9CC2 /* Notifications.app */,
+				FBA86BE72E18CE04002D9CC2 /* EasyMovie.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,64 +48,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FBA86BC92E18AAD0002D9CC2 /* Notifications */ = {
+		FBA86BE62E18CE04002D9CC2 /* EasyMovie */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FBA86BD82E18AAD1002D9CC2 /* Build configuration list for PBXNativeTarget "Notifications" */;
+			buildConfigurationList = FBA86BF52E18CE05002D9CC2 /* Build configuration list for PBXNativeTarget "EasyMovie" */;
 			buildPhases = (
-				FBA86BC62E18AAD0002D9CC2 /* Sources */,
-				FBA86BC72E18AAD0002D9CC2 /* Frameworks */,
-				FBA86BC82E18AAD0002D9CC2 /* Resources */,
+				FBA86BE32E18CE04002D9CC2 /* Sources */,
+				FBA86BE42E18CE04002D9CC2 /* Frameworks */,
+				FBA86BE52E18CE04002D9CC2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				FBA86BCC2E18AAD0002D9CC2 /* Notifications */,
+				FBA86BE92E18CE04002D9CC2 /* EasyMovie */,
 			);
-			name = Notifications;
+			name = EasyMovie;
 			packageProductDependencies = (
 			);
-			productName = Notifications;
-			productReference = FBA86BCA2E18AAD0002D9CC2 /* Notifications.app */;
+			productName = EasyMovie;
+			productReference = FBA86BE72E18CE04002D9CC2 /* EasyMovie.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FBA86BC22E18AAD0002D9CC2 /* Project object */ = {
+		FBA86BDF2E18CE04002D9CC2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
-					FBA86BC92E18AAD0002D9CC2 = {
+					FBA86BE62E18CE04002D9CC2 = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
 			};
-			buildConfigurationList = FBA86BC52E18AAD0002D9CC2 /* Build configuration list for PBXProject "Notifications" */;
+			buildConfigurationList = FBA86BE22E18CE04002D9CC2 /* Build configuration list for PBXProject "EasyMovie" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = FBA86BC12E18AAD0002D9CC2;
+			mainGroup = FBA86BDE2E18CE04002D9CC2;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = FBA86BCB2E18AAD0002D9CC2 /* Products */;
+			productRefGroup = FBA86BE82E18CE04002D9CC2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FBA86BC92E18AAD0002D9CC2 /* Notifications */,
+				FBA86BE62E18CE04002D9CC2 /* EasyMovie */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FBA86BC82E18AAD0002D9CC2 /* Resources */ = {
+		FBA86BE52E18CE04002D9CC2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -115,7 +115,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FBA86BC62E18AAD0002D9CC2 /* Sources */ = {
+		FBA86BE32E18CE04002D9CC2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,7 +125,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		FBA86BD62E18AAD1002D9CC2 /* Debug */ = {
+		FBA86BF32E18CE05002D9CC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -188,7 +188,7 @@
 			};
 			name = Debug;
 		};
-		FBA86BD72E18AAD1002D9CC2 /* Release */ = {
+		FBA86BF42E18CE05002D9CC2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -244,15 +244,14 @@
 			};
 			name = Release;
 		};
-		FBA86BD92E18AAD1002D9CC2 /* Debug */ = {
+		FBA86BF62E18CE05002D9CC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Notifications/Preview Content\"";
-				DEVELOPMENT_TEAM = LZ2EAY26MB;
+				DEVELOPMENT_ASSET_PATHS = "\"EasyMovie/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -265,7 +264,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = pe.isil.Notifications;
+				PRODUCT_BUNDLE_IDENTIFIER = pe.isil.EasyMovie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -273,15 +272,14 @@
 			};
 			name = Debug;
 		};
-		FBA86BDA2E18AAD1002D9CC2 /* Release */ = {
+		FBA86BF72E18CE05002D9CC2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Notifications/Preview Content\"";
-				DEVELOPMENT_TEAM = LZ2EAY26MB;
+				DEVELOPMENT_ASSET_PATHS = "\"EasyMovie/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -294,7 +292,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = pe.isil.Notifications;
+				PRODUCT_BUNDLE_IDENTIFIER = pe.isil.EasyMovie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -305,25 +303,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FBA86BC52E18AAD0002D9CC2 /* Build configuration list for PBXProject "Notifications" */ = {
+		FBA86BE22E18CE04002D9CC2 /* Build configuration list for PBXProject "EasyMovie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FBA86BD62E18AAD1002D9CC2 /* Debug */,
-				FBA86BD72E18AAD1002D9CC2 /* Release */,
+				FBA86BF32E18CE05002D9CC2 /* Debug */,
+				FBA86BF42E18CE05002D9CC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FBA86BD82E18AAD1002D9CC2 /* Build configuration list for PBXNativeTarget "Notifications" */ = {
+		FBA86BF52E18CE05002D9CC2 /* Build configuration list for PBXNativeTarget "EasyMovie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FBA86BD92E18AAD1002D9CC2 /* Debug */,
-				FBA86BDA2E18AAD1002D9CC2 /* Release */,
+				FBA86BF62E18CE05002D9CC2 /* Debug */,
+				FBA86BF72E18CE05002D9CC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FBA86BC22E18AAD0002D9CC2 /* Project object */;
+	rootObject = FBA86BDF2E18CE04002D9CC2 /* Project object */;
 }
