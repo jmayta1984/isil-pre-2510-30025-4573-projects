@@ -9,8 +9,7 @@ import SwiftUI
 
 struct SearchMovieView: View {
     
-    @StateObject var viewModel = MovieListViewModel()
-    @State var query = ""
+    @StateObject var viewModel = SearchMovieViewModel()
     
     var body: some View {
         
@@ -18,9 +17,9 @@ struct SearchMovieView: View {
             HStack {
                 Image(systemName: "magnifyingglass")
                     .foregroundStyle(.gray)
-                TextField("Search", text: $query)
+                TextField("Search", text: $viewModel.query)
                     .onSubmit {
-                        viewModel.searchMovies(query: query)
+                        viewModel.searchMovies()
                     }
             }
             .padding()

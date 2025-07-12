@@ -18,7 +18,7 @@ struct MovieDTO: Decodable {
     
     let id: Int
     let title: String
-    let poster: String
+    let poster: String?
     let popularity: Double
     let overview: String
     
@@ -33,7 +33,7 @@ struct MovieDTO: Decodable {
     func toDomain() -> Movie {
         Movie(id: id,
               title: title,
-              poster: "https://image.tmdb.org/t/p/w500\(poster)",
+              poster: poster.map({ "https://image.tmdb.org/t/p/w500\($0)"}) ?? "",
               popularity: popularity)
     }
 }
