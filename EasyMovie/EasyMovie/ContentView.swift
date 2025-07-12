@@ -9,14 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TabView {
-            Tab("Search", systemImage: "magnifyingglass") {
-                SearchMovieView()
-            }
-            Tab("Favorites", systemImage: "heart") {
-                Text("Favorites")
+        NavigationStack {
+            TabView {
+                Tab("Search", systemImage: "magnifyingglass") {
+                    SearchMovieView()
+                     
+                }
+                Tab("Favorites", systemImage: "heart") {
+                    FavoriteListView()
+                        
+                }
             }
         }
+        
+        .tint(.black)
     }
 }
 

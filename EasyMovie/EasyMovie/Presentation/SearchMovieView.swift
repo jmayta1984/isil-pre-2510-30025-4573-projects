@@ -57,7 +57,11 @@ struct SearchMovieView: View {
                 
             }
         }
-        .sheet(item: $selectedMovie) { MovieDetailView(movie: $0) }
+        .sheet(item: $selectedMovie) { movie in
+            MovieDetailView(movie: movie) {
+                viewModel.toggleFavorite(movie: movie)
+            }
+        }
     }
 }
 

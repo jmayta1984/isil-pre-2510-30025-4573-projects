@@ -9,7 +9,7 @@ import Foundation
 
 class SearchMovieViewModel: ObservableObject {
     @Published var uiState: UIState<[Movie]> = .initialState
-    @Published var query: String = "batman"
+    @Published var query: String = ""
     
     func searchMovies() {
         uiState = .loadingState
@@ -26,5 +26,15 @@ class SearchMovieViewModel: ObservableObject {
             }
         }
         
+    }
+    
+    func toggleFavorite(movie: Movie) {
+        print("Toggle")
+        let dao = FavoriteDAO.shared
+        if dao.isFavorite(id: movie.id) {
+            dao.deleteFavorite(id: movie.id)
+        } else {
+            dao.insertFavorite(movie: movie)
+        }
     }
 }

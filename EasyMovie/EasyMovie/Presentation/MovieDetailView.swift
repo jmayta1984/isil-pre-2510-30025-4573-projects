@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MovieDetailView: View {
     let movie: Movie
+    let toggleFavorite: () -> Void
     var body: some View {
         VStack(alignment: .leading) {
             
@@ -35,17 +36,18 @@ struct MovieDetailView: View {
                     }
                 }
                 Button {
-                    
+                    toggleFavorite()
                 } label: {
                     Image(systemName: "heart")
                         .resizable()
                         .frame(width: 20, height: 20)
-                        .padding()
                         .foregroundStyle(.black)
-                        .background(.white)
-                        .clipShape(Circle())
                         .padding()
+                       
                 }
+                .background(.white)
+                .clipShape(Circle())
+                .padding()
 
             }
             VStack (alignment: .leading){
