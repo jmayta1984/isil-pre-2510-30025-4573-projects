@@ -11,4 +11,5 @@ struct Movie: Identifiable {
     let title: String
     let poster: String
     let popularity: Double
+    let overview: String
 }

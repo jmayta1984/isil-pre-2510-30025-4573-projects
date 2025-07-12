@@ -10,6 +10,7 @@ import SwiftUI
 struct SearchMovieView: View {
     
     @StateObject var viewModel = SearchMovieViewModel()
+    @State var selectedMovie: Movie? = nil
     
     var body: some View {
         
@@ -25,7 +26,7 @@ struct SearchMovieView: View {
             .padding()
             .background(.gray.opacity(0.1))
             .clipShape(RoundedRectangle(cornerRadius: 8))
-            .padding()
+            .padding(.horizontal)
             
             switch viewModel.uiState {
             case .initialState:
@@ -41,13 +42,22 @@ struct SearchMovieView: View {
                 List {
                     ForEach(movies) { movie in
                         MovieListItemView(movie: movie)
+                            .onTapGesture {
+                                selectedMovie = movie
+                            }
                     }
                 }
                 .listStyle(.plain)
             case .failureState(let message):
-                Text(message)
+                VStack {
+                    Spacer()
+                    Text(message)
+                    Spacer()
+                }
+                
             }
         }
+        .sheet(item: $selectedMovie) { MovieDetailView(movie: $0) }
     }
 }
 

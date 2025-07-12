@@ -17,10 +17,10 @@ struct MoviesDTO: Decodable {
 struct MovieDTO: Decodable {
     
     let id: Int
-    let title: String
+    let title: String?
     let poster: String?
-    let popularity: Double
-    let overview: String
+    let popularity: Double?
+    let overview: String?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -32,8 +32,10 @@ struct MovieDTO: Decodable {
     
     func toDomain() -> Movie {
         Movie(id: id,
-              title: title,
+              title: title ?? "",
               poster: poster.map({ "https://image.tmdb.org/t/p/w500\($0)"}) ?? "",
-              popularity: popularity)
+              popularity: popularity ?? 0.0,
+              overview: overview ?? ""
+        )
     }
 }

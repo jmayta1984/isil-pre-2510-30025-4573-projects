@@ -9,7 +9,7 @@ import Foundation
 
 class SearchMovieViewModel: ObservableObject {
     @Published var uiState: UIState<[Movie]> = .initialState
-    @Published var query: String = ""
+    @Published var query: String = "batman"
     
     func searchMovies() {
         uiState = .loadingState

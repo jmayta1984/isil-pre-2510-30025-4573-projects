@@ -14,14 +14,17 @@ struct MovieListItemView: View {
             AsyncImage(url: URL(string: movie.poster)) { phase in
                 switch phase {
                 case .empty:
-                    EmptyView()
+                    ProgressView()
+                        .frame(width: 120, height: 160)
                 case .success(let image):
                     image.resizable()
-                        .scaledToFit()
-                        .frame(height: 160)
+                        .scaledToFill()
+                        .frame(width: 120, height: 160)
                         .clipShape(RoundedRectangle(cornerRadius: 8))
+
                 case .failure(let error):
                     Text(error.localizedDescription)
+                        .frame(width: 120, height: 160)
                 @unknown default:
                     EmptyView()
                 }
